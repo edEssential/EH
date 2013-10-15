@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131014204948) do
+ActiveRecord::Schema.define(:version => 20131015155414) do
 
   create_table "homeposts", :force => true do |t|
     t.datetime "created_at",               :null => false
@@ -60,11 +60,11 @@ ActiveRecord::Schema.define(:version => 20131014204948) do
   end
 
   create_table "releases", :force => true do |t|
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.string   "title"
-    t.string   "review"
-    t.string   "description"
+    t.text     "review",                  :limit => 255
+    t.text     "description",             :limit => 255
     t.string   "releaseinfo"
     t.string   "buylink"
     t.string   "url"
