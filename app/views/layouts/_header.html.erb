@@ -1,0 +1,37 @@
+<div class="header">
+	<div class="logo">
+		<%= link_to image_tag('logo.png'), root_path %>
+	</div>
+	
+	<div class="socialNavContainer">
+		<div class="socialNavButtons">
+			<%= link_to image_tag('fb.png'), 'https://www.facebook.com/ed.hamilton.10', :target => '_blank', :class => 'socialNavButton' %>
+			<%= link_to image_tag("twitter.png"), 'https://twitter.com/edhamilton812', :target => '_blank', :class => 'socialNavButton' %>
+			<%= link_to image_tag("soundcloud.png"), 'https://soundcloud.com/ed-hamilton', :target => '_blank', :class => 'socialNavButton' %>
+		</div>
+	</div>
+	<div class="navigationContainer" id="navigation">
+			<div class="navigationButtons linkGray">
+				<ul>
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><li id="home">Music</li></a>
+					  	<ul class="dropdown-menu" role="menu" id="menuPosition">
+					    	<li><a href="#" id="menuText">Arabesque</a><hr /></li>
+					    	<li><%= link_to 'Sketches For Skomer', release_path(1), :id => "menuText" %><hr /></li>
+					    	<li><%= link_to 'Behind The Clouds', release_path(2), :id => "menuText"  %></li>
+					  	</ul>
+					</div>
+					<li id="videos"><%= link_to 'Photography', photos_path, :class => 'photosnav'%></li>
+					<li id="shows"><%= link_to 'Web Design', designs_path, :class => 'designsnav' %></li>
+					<li id="contact"><%= link_to 'Contact', ('mailto:anna_carter@hotmail.com?Subject=Contact%20from%20the%website') %></li>
+				</ul>
+			</div>
+	</div>
+	<% if user_signed_in? %>
+		<div class="userInfo">
+			{ Logged in as <strong><%= current_user.email %></strong>
+			<span class="linkPink"><%= link_to 'Edit', edit_user_registration_path %></span>
+			<span class="linkPink"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></span> }
+		</div>
+	<% end %>
+</div>

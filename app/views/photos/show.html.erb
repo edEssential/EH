@@ -1,0 +1,12 @@
+<h1>Sub listed photographs</h2>
+	
+	<% @photo.pdetails.each do |p| %>
+		<div class="">
+			<%= image_tag(p.photo.url(:square)) %>
+			<%= link_to 'Edit', edit_pdetail_path(p) %>
+		</div>
+	<% end %>
+	
+	<%= link_to 'New', new_pdetail_path %>
+	
+	

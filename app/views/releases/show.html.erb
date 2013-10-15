@@ -1,0 +1,20 @@
+<div class="introTextText reviews">
+	<%= @release.review %>
+</div>
+<div class="rightPhoto">
+	<%= image_tag(@release.rightimage(:thumb)) rescue nil %>
+</div>
+<div class="latestPhoto">
+	<%= @release.title %>
+	<div class="date"><%= @release.releaseinfo %></div>
+	<%= image_tag(@release.packshot(:thumb)) %>
+</div>
+<div class="soundcloud textGray description">
+	<%= simple_format(@release.description) %>
+</div>
+<div class="releaseDate">
+	<%= @release.releaseinfo %>
+</div>
+<div class="track">
+	<%= @release.url_html %>
+</div>

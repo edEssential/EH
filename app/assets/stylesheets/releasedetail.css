@@ -1,0 +1,30 @@
+.reviews {
+	font-size:19px;
+	line-height:24px;
+	font-weight:600;
+	margin:23px 0px 0px 0px;
+	width:410px;
+}
+.description {
+	font-family:"helvetica";
+	color:#949393;
+	font-size:14px;
+	line-height:19px;
+	width:590px;
+}
+.description p {
+	margin:18px 0px;
+}
+.releaseDate {
+	position:absolute;
+	width:590px;
+	margin:875px 0px 0px 353px;
+	font-family:"futura";
+	font-weight:500;
+	font-size:17px;
+}
+.track {
+	position:absolute;
+	width:590px;
+	margin:960px 0px 0px 353px;
+}

@@ -1,0 +1,25 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+#menuText {
+	font-size:12px;
+	text-transform:capitalize;
+	text-align:center;
+	font-size:14px;
+	letter-spacing:-1px;
+	color:#5a5a59;
+}
+#menuText:hover {
+	color:#ee6457;
+}
+#menuPosition {
+	left:-105%;
+}
+hr {
+	margin:2px 0px;
+}

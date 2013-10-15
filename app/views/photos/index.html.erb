@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+	<div class="showsAdder"><%= link_to image_tag("plusVideo.png"), new_photo_path %></div>
+<% end %>
+
+
+<% @photos.each do |p| %>
+	<%= p.setname %><br />
+	<%= link_to image_tag(p.cover.url(:thumb)), p %></br />
+	<%= simple_format(p.description) %><br />
+	<% if user_signed_in? %>
+		<%= link_to image_tag('edit2.png'), edit_photo_path(p.id), :class => "editVideo" %>
+		<%= link_to image_tag('delete2.png'), p, :confirm => 'Are you sure?', :method => :delete, :class => "deleteRelease" %>
+	<% end %>
+<% end %>

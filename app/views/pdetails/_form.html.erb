@@ -1,0 +1,26 @@
+<div class="formText formFade">
+	<p class="formHeader">Use this form to save your photo's to individual galleries</p><br /><br />
+	<div class="form">	
+		<%= form_for(@pdetail) do |f| %>
+		
+			<% if @pdetail.errors.any? %>
+		    	<div id="error_explanation">
+		      		<h2><%= pluralize(@pdetail.errors.count, "error") %> prohibited this pdetail from being saved:</h2>
+					<ul>
+		      			<% @pdetail.errors.full_messages.each do |msg| %>
+		        			<li><%= msg %></li>
+		      			<% end %>
+		      		</ul>
+		    	</div>
+		  	<% end %>
+		
+    		<%= f.label :Photo_title, class: 'formField' %>
+    		<%= f.text_field :title, class: 'formFieldT'  %><br />
+			<%= f.label :Upload_photo, class: 'formTitle' %>
+			<%= f.file_field :photo, class: 'formFieldBox2' %>
+			<%= f.label :Chose_your_gallery, class: 'formField' %>
+    		<div class="formFieldBox3"><%= f.select :photo_id, @options %></div><br />
+    		<%= f.submit %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+<div class="formText formFade">
+	<p class="formHeader Gray">Add or edit your homepage content below!</p><br /><br />
+	<div class="form">	
+		<%= form_for(@homepost) do |f| %>
+			<%= f.label :Upload_right_image, class: 'formFieldT2' %>
+    		<%= f.file_field :rightimage, class: 'formFieldT3'  %><br /><br />
+			<%= f.label :Upload_latest_image, class: 'formFieldT2' %>
+    		<%= f.file_field :latestimage, class: 'formFieldT3'  %><br /><br />
+			<%= f.label :Tab_1_title, class: 'formFieldT2' %>
+    		<%= f.text_field :title1, class: 'formFieldT2'  %><br /><br />
+			<%= f.label :Tab_1_content, class: 'formFieldT2' %>
+    		<%= f.text_field :url1, class: 'formFieldt2T2'  %><br /><br />
+			<%= f.label :Tab_2_title, class: 'formFieldT2' %>
+    		<%= f.text_field :title2, class: 'formFieldT2'  %><br /><br />
+			<%= f.label :Tab_2_content, class: 'formFieldT2' %>
+    		<%= f.text_field :url2, class: 'formFieldT2'  %><br /><br />
+			<%= f.label :Tab_3_title, class: 'formFieldT2' %>
+    		<%= f.text_field :title3, class: 'formFieldT2'  %><br /><br />
+			<%= f.label :Tab_3_content, class: 'formFieldT2' %>
+    		<%= f.text_field :url3, class: 'formFieldT2'  %><br /><br />
+    		<%= f.submit %>
+		<% end %>
+	</div>
+</div>

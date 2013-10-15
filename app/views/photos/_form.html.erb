@@ -1,0 +1,14 @@
+<div class="formText formFade">
+	<p class="formHeader">Use this form to save your photo galleries to the site</p><br /><br />
+	<div class="form">	
+		<%= form_for(@photo) do |f| %>
+    		<%= f.label :Set_title, class: 'formField' %>
+    		<%= f.text_field :setname, class: 'formFieldT'  %><br />
+			<%= f.label :Upload_cover_photo, class: 'formTitle' %>
+			<%= f.file_field :cover, class: 'formFieldBox2' %>
+			<%= f.label :description, class: 'formField' %>
+    		<%= f.text_area :description, class: 'formFieldBox'  %><br />
+    		<%= f.submit %>
+		<% end %>
+	</div>
+</div>

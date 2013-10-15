@@ -1,0 +1,24 @@
+<div class="formText formFade">
+	<p class="formHeader Gray">Add or edit your homepage content below!</p><br /><br />
+	<div class="form">	
+		<%= form_for(@release) do |f| %>
+			<%= f.label :Title, class: 'formField' %>
+    		<%= f.text_field :title, class: 'formFieldT2' %><br /><br />
+			<%= f.label :Description, class: 'formField' %>
+    		<%= f.text_area :description, class: 'formFieldT2' %><br /><br />
+			<%= f.label :Review_extract, class: 'formField' %>
+    		<%= f.text_area :review, class: 'formFieldT2' %><br /><br />
+			<%= f.label :Import_packshot, class: 'formField' %>
+			<%= f.file_field :packshot, class: 'formFieldT2' %>
+			<%= f.label :Import_right_image, class: 'formField' %>
+			<%= f.file_field :rightimage, class: 'formFieldT2' %>
+			<%= f.label :Release_info, class: 'formField' %>
+    		<%= f.text_field :releaseinfo, class: 'formFieldT2' %><br /><br />
+			<%= f.label :Buy_link, class: 'formField' %>
+    		<%= f.text_field :buylink, class: 'formFieldT2' %><br /><br />
+			<%= f.label :Url, class: 'formField' %>
+    		<%= f.text_field :url, class: 'formFieldT2' %><br /><br />
+    		<%= f.submit %>
+		<% end %>
+	</div>
+</div>
