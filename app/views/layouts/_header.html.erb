@@ -16,7 +16,7 @@
 					<div class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><li id="home">Music</li></a>
 					  	<ul class="dropdown-menu" role="menu" id="menuPosition">
-					    	<li><a href="#" id="menuText">Arabesque</a><hr /></li>
+					    	<li><%= link_to 'Arabesuqe', release_path(3), :id => "menuText" %><hr /></li>
 					    	<li><%= link_to 'Sketches For Skomer', release_path(1), :id => "menuText" %><hr /></li>
 					    	<li><%= link_to 'Behind The Clouds', release_path(2), :id => "menuText"  %></li>
 					  	</ul>
