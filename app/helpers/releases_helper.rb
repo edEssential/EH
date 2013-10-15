@@ -1,7 +1,7 @@
 module ReleasesHelper
   
   def release_review
-    if @release.review.length > 40
+    if @release.review.length < 50
   		"introTextText reviews2"
   	else
   		"introTextText reviews"
