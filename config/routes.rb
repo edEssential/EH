@@ -4,6 +4,7 @@ V1::Application.routes.draw do
   root :to => 'home#index'
   
   resources :photos
+  resources :photographs
   resources :designs
   resources :pdetails
   resources :homeposts

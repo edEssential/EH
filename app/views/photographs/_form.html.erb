@@ -1,0 +1,10 @@
+<div class="formText formFade">
+	<p class="formHeader">Use this form to save your photos to the site</p><br /><br />
+	<div class="form">	
+		<%= form_for(@photograph) do |f| %>
+			<br /><%= f.label :Upload_photo, class: 'formTitle' %>
+			<%= f.file_field :photograph, class: 'formFieldBox2' %><br /><br />
+    		<%= f.submit %>
+		<% end %>
+	</div>
+</div>

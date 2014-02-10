@@ -5,10 +5,14 @@
  *= require base
  *= require bootstrap_and_overrides
  *= require jquery.ui.datepicker
- *= require shared
  *= require headfoot
  *= require cms
  *= require home
  *= require_self
  *= require releasedetail
+ *= require shared
+ *= require photographs
+ *= require style
+ *= require slider
+ *= require elements
 */

@@ -6,14 +6,37 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
   		<meta name="author" cotent="eghamilton.co.uk" />
-  		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-		<meta http-equiv="HandheldFriendly"content="true" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<!--<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">-->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
  
  		<%= stylesheet_link_tag "application" %>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
+		
+		<script type="text/javascript">
+	 		$(document).ready(function() {
+	 			$('.flexslider').flexslider({
+	  				slideshowSpeed: 4500,
+	    			controlNav: false,
+	    			pauseOnAction: false
+	  			});
+			});
+		</script>
   
 	</head>
+	
 	<body class="<%= params[:controller] %>_controller">
 	
 		<div class="container">

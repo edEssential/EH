@@ -1,0 +1,16 @@
+<div class="photo">
+
+	<script type="text/javascript" charset="utf-8">
+	  $(function(){
+	      $("#slides").electricSlide();
+	  })
+	</script>
+	<div id="slides">
+	<% @photograph.each do |p| %>
+	  <div class="detail slide">
+	    <%= image_tag p.photograph %>
+	  </div>
+	<% end %>
+	</div>
+
+</div>

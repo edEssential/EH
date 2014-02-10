@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]  
+  before_filter :authenticate_user! 
   
   def new
     @photo = Photo.new
@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
   end
   
   def destroy
-    @photo = Show.find(params[:id])
+    @photo = Photo.find(params[:id])
     @photo.destroy
     respond_to do |format|
       format.html { redirect_to photos_path }

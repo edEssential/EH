@@ -1,20 +1,27 @@
-<div class='<%= release_review %>'>
-	<%= @release.review %>
+<div class="releaseHeader">
+	<div class='<%= release_review %>'>
+		<%= @release.review %>
+	</div>
+	<div class="rightPhoto">
+		<%= image_tag(@release.rightimage(:thumb)) rescue nil %>
+	</div>
 </div>
-<div class="rightPhoto">
-	<%= image_tag(@release.rightimage(:thumb)) rescue nil %>
+<div class="releaseContent">
+	<div class="latestPhoto">
+		<%= @release.title %>
+		<div class="date"><%= @release.releaseinfo %></div>
+		<%= image_tag(@release.packshot(:thumb)) %>
+	</div>
+	<div class="soundcloud textGray description">
+		<%= simple_format(@release.description) %>
+	</div>
+	<div class="releaseDate">
+		<%= @release.releaseinfo %>
+	</div>
+	<div class="track">
+		<%= @release.url_html %>
+	</div>
 </div>
-<div class="latestPhoto">
-	<%= @release.title %>
-	<div class="date"><%= @release.releaseinfo %></div>
-	<%= image_tag(@release.packshot(:thumb)) %>
-</div>
-<div class="soundcloud textGray description">
-	<%= simple_format(@release.description) %>
-</div>
-<div class="releaseDate">
-	<%= @release.releaseinfo %>
-</div>
-<div class="track">
-	<%= @release.url_html %>
-</div>
+<% if user_signed_in? %>
+	<%= link_to image_tag('edit2.png'), edit_release_path, :class => "edit" %>
+<% end %>

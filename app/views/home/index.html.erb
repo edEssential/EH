@@ -1,38 +1,42 @@
-<div class="introTextText">
-	<strong>Hello.</strong> My name is Ed Hamilton. I release <span class="linkOrange"><%= link_to 'music', root_path %></span> on 
-	<span class="labelsLink"><%= link_to 'Hibernate', root_path %></span> &amp; <span class="labelsLink"><%= link_to 'Futuresequence', root_path %>.
-	<br />I also take <span class="linkOrange"><%= link_to 'photographs' %></span> &amp; <span class="linkOrange"><%= link_to 'build websites', root_path %></span>.
-</div>
-<div class="readMore">
-	<%= link_to image_tag('readmore.png'), root_path %>
-	<div style="padding-top:15px;">
-		<% if user_signed_in? %>
-			<%= link_to image_tag('edit2.png'), edit_homepost_path(1), :class => "" %>
-		<% end %>
+<div class="homepageHeader">
+	<div class="introTextText">
+		<strong>Hello.</strong> My name is Ed Hamilton. I release <span class="linkOrange"><%= link_to 'music', root_path %></span> on 
+		<span class="labelsLink"><%= link_to 'Hibernate', root_path %></span> &amp; <span class="labelsLink"><%= link_to 'Futuresequence', root_path %>.
+		<br />I also take <span class="linkOrange"><%= link_to 'photographs' %></span> &amp; <span class="linkOrange"><%= link_to 'build websites', root_path %></span>.
+	</div>
+	<div class="readMore">
+		<%= link_to image_tag('readmore.png'), root_path %>
+		<div style="padding-top:15px;">
+			<% if user_signed_in? %>
+				<%= link_to image_tag('edit2.png'), edit_homepost_path(1), :class => "" %>
+			<% end %>
+		</div>
+	</div>
+	<div class="rightPhoto">
+		<%= image_tag(@homepost.rightimage(:thumb)) rescue nil %>
 	</div>
 </div>
-<div class="rightPhoto">
-	<%= image_tag(@homepost.rightimage(:thumb)) rescue nil %>
-</div>
-<div class="latestPhoto">
-	Latest Photos
-	<div class="date"><%= @homepost.latestimage_updated_at.to_s(:due_date) %></div>
-	<%= link_to image_tag(@homepost.latestimage(:thumb)), photos_path rescue nil %>
-</div>
+<div class="homepageContent">
+	<div class="latestPhoto">
+		Latest Photos
+		<div class="date"><%= @homepost.latestimage_updated_at.to_s(:due_date) %></div>
+		<%= link_to image_tag(@homepost.latestimage(:thumb)), photographs_path rescue nil %>
+	</div>
 
-<div class="soundcloud" id="tabs">
-	<ul class="titles">
-  		<li class="setTitle linkGray"><a href="#tabs-1"><%= @homepost.title1 rescue nil %></a></li>
-   		<li class="setTitle linkGray"><a href="#tabs-2"><%= @homepost.title2 rescue nil %></a></li>
-   		<li class="setTitle linkGray"><a href="#tabs-3"><%= @homepost.title3 rescue nil %></a></li>
- 	</ul>
- 	<div id="tabs-1">
-   		<p><%= @homepost.url1.html_safe rescue nil %></p>
- 	</div>
- 	<div id="tabs-2">
-   		<p><%= @homepost.url2.html_safe rescue nil %></p>
- 	</div>
- 	<div id="tabs-3">
-   		<p><%= @homepost.url3.html_safe rescue nil %></p>
- 	</div>
+	<div class="soundcloud" id="tabs">
+		<ul class="titles">
+	  		<li class="setTitle linkGray"><a href="#tabs-1"><%= @homepost.title1 rescue nil %></a></li>
+	   		<li class="setTitle linkGray"><a href="#tabs-2"><%= @homepost.title2 rescue nil %></a></li>
+	   		<li class="setTitle linkGray"><a href="#tabs-3"><%= @homepost.title3 rescue nil %></a></li>
+	 	</ul>
+	 	<div id="tabs-1">
+	   		<p><%= @homepost.url1.html_safe rescue nil %></p>
+	 	</div>
+	 	<div id="tabs-2">
+	   		<p><%= @homepost.url2.html_safe rescue nil %></p>
+	 	</div>
+	 	<div id="tabs-3">
+	   		<p><%= @homepost.url3.html_safe rescue nil %></p>
+	 	</div>
+	</div>
 </div>

@@ -1,20 +1,28 @@
 //= require jquery
-//= require jquery.ui.all
-//= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+//= require slides
+//= require jquery.sizes
+//= require jquery.ui.all
+//= require jquery_ujs
+//= require jquery-1.7.2.min
+//= require plugins
+//= require options
+//= require custom
 
 $(document).ready(function () {
-	$('.videos').hide();	
-	$('.videos').delay(300).fadeIn(1000);
-	$('.formFade').hide();	
-	$('.formFade').delay(150).fadeIn(700);
-	$('.shows').hide();	
-	$('.shows').delay(200).fadeIn(500);
-	$('.releases').hide();	
-	$('.releases').delay(200).fadeIn(500);
-	$('.releasesDetail').hide();	
-	$('.releasesDetail').delay(200).fadeIn(500);
+	$('.header').hide();
+	$('.header').delay(200).fadeIn(400);
+	$('.rulers').hide();
+	$('.rulers').delay(200).fadeIn(400);
+	$('.releaseHeader').hide();	
+	$('.releaseHeader').delay(600).fadeIn(400);
+	$('.releaseContent').hide();	
+	$('.releaseContent').delay(600).fadeIn(400);
+	$('.homepageHeader').hide();	
+	$('.homepageHeader').delay(600).fadeIn(400);
+	$('.homepageContent').hide();	
+	$('.homepageContent').delay(1600).fadeIn(800);
 	$('#show_date').datepicker( {
 		dateFormat : "dd MM yy"
 	});

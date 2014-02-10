@@ -40,6 +40,10 @@ i {font-size:13px;}
 	margin:46px 70px 0px 60px;
 }
 .userInfo strong {color:#858585;}
+.edit {
+	position:absolute;
+	margin:108px 0px 0px -580px;
+}
 
 
 @media only screen and (min-width: 480px) and (max-width: 610px) {

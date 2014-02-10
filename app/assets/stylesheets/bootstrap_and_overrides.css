@@ -23,3 +23,6 @@
 hr {
 	margin:2px 0px;
 }
+.setTitle a:hover, .setTitle a:active {
+	color:#ee6457;
+}
