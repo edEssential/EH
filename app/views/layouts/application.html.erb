@@ -24,29 +24,16 @@
  		<%= stylesheet_link_tag "application" %>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
-		
-		<script type="text/javascript">
-	 		$(document).ready(function() {
-	 			$('.flexslider').flexslider({
-	  				slideshowSpeed: 4500,
-	    			controlNav: false,
-	    			pauseOnAction: false
-	  			});
-			});
-		</script>
   
 	</head>
 	
-	<body class="<%= params[:controller] %>_controller">
-	
-		<div class="container">
+	<body>
 		
-			<div id="header"><%= render 'layouts/header' %></div>
-			<div id="rulers"><%= render 'layouts/rulers' %></div>
+		<div><%= render 'layouts/header' %></div>
 		
-			<%= yield %>
+		<%= yield %>
 		
-		</div>
+		<div><%= render 'layouts/footer' %></div>
 
 	</body>
 </html>

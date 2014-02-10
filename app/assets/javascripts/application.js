@@ -1,10 +1,5 @@
 //= require jquery
-//= require twitter/bootstrap
 //= require_tree .
-//= require slides
-//= require jquery.sizes
-//= require jquery.ui.all
-//= require jquery_ujs
 //= require jquery-1.7.2.min
 //= require plugins
 //= require options

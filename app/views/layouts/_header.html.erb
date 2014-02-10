@@ -1,53 +1,16 @@
-<!--<div id="mobile-nav">
-	<div class="container">
-	
-			<div class="navigationButton twelve columns clearfix">
-				<img src="images/icons/mobile-nav.png" alt="Navigation" />
-			</div>
-			
-			
-			<div class="navigationContent twelve columns clearfix">
-				<ul>
-					<li><a class="active" href="index.html">Home</a>
-						<ul class="dropdown">
-							<li><a href="index.html">Default Home</a></li>
-							<li><a href="portfolio-home.html">Portfolio Home</a></li>
-							<li><a href="app-home.html">App Home</a></li>
-							<li><a href="app-home-alt.html">App Home Two</a></li>
-						</ul>	
-					</li>
-					<li><a href="portfolio-standard.html">Portfolio</a>
-						<ul class="dropdown">
-							<li><a href="portfolio-masonry.html">Masonry</a></li>
-							<li><a href="portfolio-standard.html">Standard</a></li>
-							<li><a href="portfolio-single-project.html">Single Project</a></li>
-						</ul>
-					</li>
-					<li><a href="about.html">Pages</a>
-						<ul class="dropdown">
-							<li><a href="about.html">About</a></li>
-							<li><a href="shortcodes.html">Shortcodes</a></li>
-							<li><a href="coming-soon.html">Coming Soon</a></li>
-							<li><a href="404.html">404 Page</a></li>
-						</ul>
-					</li>
-					<li><a href="features.html">Features</a></li>
-					<li><a href="blog.html">Blog</a>
-						<ul class="dropdown">
-							<li><a href="blog-single-post.html">Single post</a></li>
-						</ul>
-					</li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-				
-	</div>
-</div>-->
 <header class="container">
 
 	<!-- Logo -->
 	<div id="logo" class="three columns">
 		<%= link_to image_tag('logo.png'), root_path %>
+	</div>
+	
+	<div class="socialNavContainer">
+		<div class="socialNavButtons">
+			<%= link_to image_tag('fb.png'), 'https://www.facebook.com/ed.hamilton.10', :target => '_blank', :class => 'socialNavButton' %>
+			<%= link_to image_tag("twitter.png"), 'https://twitter.com/edhamilton812', :target => '_blank', :class => 'socialNavButton' %>
+			<%= link_to image_tag("soundcloud.png"), 'https://soundcloud.com/ed-hamilton', :target => '_blank', :class => 'socialNavButton' %>
+		</div>
 	</div>
 	
 	<% if user_signed_in? %>
@@ -70,8 +33,7 @@
 			</li>
 			<li><%= link_to 'Photography', photographs_path, :class => 'photosnav'%></li>
 			<li><%= link_to 'Web Design', designs_path, :class => 'designsnav' %></li>
-			<li><%= link_to 'Contact', ('mailto:anna_carter@hotmail.com?Subject=Contact%20from%20the%website') %></li>
+			<li><%= link_to 'Contact', ('') %></li>
 		</ul>
 	</nav><!-- END NAVIGATION -->
-	
 </header><!-- END CONTAINER -->
