@@ -157,6 +157,18 @@ Author URI: http://www.aetherdesign.net
 		height:475px;
 	}
 	
+	#overview .height3 {
+		height:515px;
+	}
+	
+	.left-margin {
+		margin-left:35px;
+	}
+	
+	.top-margin {
+		margin-top:20px;
+	}
+	
 	#overview .title, #overview .icon, #overview .description { float: left; }
 
 	#overview .title {

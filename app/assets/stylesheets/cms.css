@@ -23,6 +23,7 @@
 	border-radius: 15px;
 	text-align:center;
 }
+.marginator {margin-left:15px;}
 .formField {margin:10px 0px 0px 0px;}
 .formFieldBox {width:70%;margin:2% 0% 0% 15% !important;}
 .formFieldBox2 {margin:2% 0% 0% 10% !important;}
@@ -33,11 +34,12 @@
 .formFieldT3 {margin:2% 0% 2% 20% !important;}
 i {font-size:13px;}
 .userInfo {
+	position:absolute;
 	width:365px;
 	float:left;
 	font-size:12px;
 	color:#FF0000;
-	margin:46px 70px 0px 60px;
+	margin:66px 70px 0px 20px;
 }
 .userInfo strong {color:#858585;}
 .edit {

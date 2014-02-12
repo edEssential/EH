@@ -1,24 +1,44 @@
-<div class="formText formFade">
-	<p class="formHeader Gray">Add or edit your homepage content below!</p><br /><br />
-	<div class="form">	
-		<%= form_for(@release) do |f| %>
-			<%= f.label :Title, class: 'formField' %>
-    		<%= f.text_field :title, class: 'formFieldT2' %><br /><br />
-			<%= f.label :Description, class: 'formField' %>
-    		<%= f.text_area :description, class: 'formFieldT2' %><br /><br />
-			<%= f.label :Review_extract, class: 'formField' %>
-    		<%= f.text_area :review, class: 'formFieldT2' %><br /><br />
-			<%= f.label :Import_packshot, class: 'formField' %>
-			<%= f.file_field :packshot, class: 'formFieldT2' %>
-			<%= f.label :Import_right_image, class: 'formField' %>
-			<%= f.file_field :rightimage, class: 'formFieldT2' %>
-			<%= f.label :Release_info, class: 'formField' %>
-    		<%= f.text_field :releaseinfo, class: 'formFieldT2' %><br /><br />
-			<%= f.label :Buy_link, class: 'formField' %>
-    		<%= f.text_field :buylink, class: 'formFieldT2' %><br /><br />
-			<%= f.label :Url, class: 'formField' %>
-    		<%= f.text_field :url, class: 'formFieldT2' %><br /><br />
-    		<%= f.submit %>
-		<% end %>
-	</div>
+<div class="mainContent">
+	<%= form_for(@release) do |f| %>
+		<ul id="overview" class="container twelve columns">
+			<div class="block two columns marginator">
+				<h3 class="title">Add/edit release content</h3>
+			</div>
+
+			<div class="block clearfix five columns height3 left-margin">
+			
+				<div id="tabs">
+					<ul>
+						<li><a href="#tab-11"><%= f.label :Title %></span></a></li>
+						<li><a href="#tab-12"><%= f.label :Description %></span></a></li>
+						<li><a href="#tab-13"><%= f.label :Review_extract %></span></a></li>
+						<li><a href="#tab-14"><%= f.label :Where? %></span></a></li>
+						<li><a href="#tab-15"><%= f.label :Url %></span></a></li>
+					</ul>
+					<div id="tab-11" class="form-field"><%= f.text_field :title, class: 'email text-area' %></div>
+					<div id="tab-12" class="form-field"><%= f.text_area :description, class: 'name text-areaArea' %></div>
+					<div id="tab-13" class="form-field"><%= f.text_area :review, class: 'email text-areaArea' %></div>
+					<div id="tab-14" class="form-field"><%= f.text_field :review_source, class: 'email text-area' %></div>
+					<div id="tab-15" class="form-field"><%= f.text_field :url, class: 'email text-area' %></div>
+				</div>
+			</div>
+			<div class="block clearfix four columns left-margin">
+				<div id="tabs" class="200top">
+					<ul>
+						<li><a href="#tab-16"><%= f.label :Packshot %></span></a></li>
+						<li><a href="#tab-17"><%= f.label :Right_image %></span></a></li>
+						<li><a href="#tab-18"><%= f.label :Info %></span></a></li>
+						<li><a href="#tab-19"><%= f.label :Buy %></span></a></li>
+					</ul>
+					<div id="tab-16" class="form-field"><%= f.file_field :packshot, class: 'name' %></div>
+					<div id="tab-17" class="form-field"><%= f.file_field :rightimage, class: 'name' %></div>
+					<div id="tab-18" class="form-field"><%= f.text_field :releaseinfo, class: 'email text-area' %></div>
+					<div id="tab-19" class="form-field"><%= f.text_field :buylink, class: 'email text-area' %></div>
+				</div>
+			</div>
+			<div class="block two columns left-margin top-margin">
+				<div class="form-click"><%= f.submit "Submit", :id => "submit" %></div>
+			</div>
+		</ul>
+	<% end %>
 </div>

@@ -22,3 +22,24 @@
 		<% end %>
 	</div>
 </div>
+
+<div class="mainContent">
+
+	<ul id="overview" class="container">
+		<div class="block clearfix six columns offset-by-three height">
+			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		  		
+				<div class="form-field">
+					<%= f.label :email %>
+		  			<%= f.email_field :email, :autofocus => true, id: 'email' %><br />
+				</div>
+				<div class="form-field">
+		  			<%= f.label :password %>
+		  			<%= f.password_field :password, class: 'name' %><br /><br />
+
+		  		<div class="form-click"><%= f.submit "Sign in", :id => "submit" %></div>
+			<% end %>
+		</div>
+	</ul>
+		
+</div>
