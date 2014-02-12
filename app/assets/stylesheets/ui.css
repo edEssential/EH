@@ -14,8 +14,11 @@ body {height: 100%;width:100%;background-color:#f5f5f5;font-size:100.01%;}
 .linkPink, .linkPink a {color:#fcb6a7;font-weight:800;text-decoration:none;}
 .introText {font-family:"brandon grotesque";margin:37px 0px 0px 0px;color:#5a5a59;font-weight:100;font-size:30px;line-height:38px;}
 .smallItalic {font-size:16px;font-style:italic;font-weight:800;}
+.releaseTitle {font-size:14px;}
 .releaseReview {font-family:"brandon grotesque";margin:37px 0px 0px 0px;color:#5a5a59;font-weight:100;font-size:22px;line-height:26px;}
 .releaseDescription {font-size:13px;line-height:22px;letter-spacing:1px;}
+.releaseInfo {font-family:"brandon grotesque";font-size:18px;line-height:20px;font-weight:200;color:#000000;margin:-10px 0px 0px 0px;}
+.releaseBuy {margin:20px 0px -10px 0px;}
 .homePhoto {margin-top:25px;}
 .homePhotoSmall {margin-left:10px;}
 .homePhotoSmall img, .packshot img {-moz-border-radius:3px;border-radius:3px;}

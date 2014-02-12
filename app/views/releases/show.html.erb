@@ -13,15 +13,23 @@
 
 	<ul id="overview" class="container">
 		<li class="three columns">
-			<div class="block clearfix">
-				<h3 class="title"><%= @release.title %></h3>
+			<div class="block clearfix height2">
+				<h3 class="title releaseTitle"><%= @release.title %></h3>
 				<p class="description"></p>
-				<%= image_tag(@release.packshot.url(:thumb), :class => "packshot" ) %></p>
+				<%= image_tag(@release.packshot.url(:thumb), :class => "packshot" ) %><br/><br/>
+				<div class="releaseInfo"><%= @release.releaseinfo %></div>
+				<div class="releaseBuy"><%= link_to image_tag('buy.png'), @release.buylink %></div>
+				</p>
 			</div>	
 		</li>
 		<li class="five columns">
-			<div class="block clearfix">
+			<div class="block clearfix height">
 				<p class="releaseDescription"><%= @release.description %></p>
+			</div>	
+		</li>
+		<li class="four columns">
+			<div class="block clearfix height">
+				<%= @release.url_html %></p>
 			</div>	
 		</li>
 	</ul>

@@ -83,8 +83,7 @@ Author URI: http://www.aetherdesign.net
 	}
 	
 	#navigation .dropdown li a:hover {
-		color: white;
-		background: #212a30;
+		color:#434343;
 	}
 	
 	.socialNavContainer {position:absolute;margin:12px 0px 0px 90px;}
@@ -155,7 +154,7 @@ Author URI: http://www.aetherdesign.net
 	}
 
 	#overview .height2 {
-		height:775px;
+		height:475px;
 	}
 	
 	#overview .title, #overview .icon, #overview .description { float: left; }
@@ -234,7 +233,7 @@ Author URI: http://www.aetherdesign.net
 /* #Footer
 ================================================== */
 
-	footer { width: 100%; background: #ababab; margin-top:100px;padding: 50px 0px; }
+	footer { width: 100%; background: #ababab; margin-top:0px;padding: 50px 0px; }
 
 	#footer-nav li { float: left; padding-right: 25px; line-height: 32px; }
 	#footer-nav li:last-of-type { padding-right: 0px; }
