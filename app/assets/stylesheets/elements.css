@@ -223,11 +223,13 @@ Author URI: http://www.aetherdesign.net
 /* #Tabs
 ================================================== */
 
-    #tabs li, #tabs p { float: left; }
+    #tabs {font-size:14px;}
+	
+	#tabs li, #tabs p { float: left; }
     
     #tabs p {
         padding: 20px 20px 30px 20px;
-        background: #e1f0ff;
+        background: #ffffff;
     }
     
     #tabs ul li a {
@@ -242,7 +244,8 @@ Author URI: http://www.aetherdesign.net
     }
     
     #tabs ul li a:hover {
-        background: #c9e2fc;
+        background: #f5f5f5;
+		color:#5c5c5c;
         -webkit-transition: background 0.33s linear;
         -moz-transition: background 0.33s linear;
         -o-transition: background 0.33s linear;
@@ -250,10 +253,16 @@ Author URI: http://www.aetherdesign.net
     }
     
     #tabs ul li.active a {
-        background: transparent;
-        border-top: 2px solid #ef1c00;
-        background: #e1f0ff;
+        background:transparent;
+        border-top:1px solid #e6e6e6;
+		border-right:1px solid #e6e6e6;
+		border-left:1px solid #e6e6e6;
+        background: #f5f5f5;
     }
+
+	#tab-1, #tab-2, #tab-3 {
+		width:432px;
+	}
 
 
 
@@ -380,7 +389,6 @@ Author URI: http://www.aetherdesign.net
         display: block;
         width: 30px;
         height: 30px;
-        background: #ef1c00;
     }
 
     #overview .icon img, .customer-icon img, .jumbo-icon img { vertical-align: baseline; }
@@ -388,7 +396,7 @@ Author URI: http://www.aetherdesign.net
     .jumbo-icon {
         width: 114px;
         height: 114px;
-        background: #ef1c00;
+        background: #f6615a;
     }
 
 

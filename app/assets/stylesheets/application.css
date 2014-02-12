@@ -5,11 +5,11 @@
 
  *= require cms
  *= require_self
- *= require shared
  *= require project-slider
  *= require reset
  *= require grid
  *= require style
  *= require slider
  *= require elements
+ *= require ui
 */

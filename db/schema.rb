@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131016104312) do
+ActiveRecord::Schema.define(:version => 20140212134234) do
 
   create_table "homeposts", :force => true do |t|
     t.datetime "created_at",               :null => false
@@ -86,6 +86,12 @@ ActiveRecord::Schema.define(:version => 20131016104312) do
     t.string   "packshot_content_type"
     t.integer  "packshot_file_size"
     t.datetime "packshot_updated_at"
+    t.string   "review_source"
+  end
+
+  create_table "tweets", :force => true do |t|
+    t.string   "content"
+    t.datetime "created"
   end
 
   create_table "users", :force => true do |t|

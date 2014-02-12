@@ -34,17 +34,17 @@ Author URI: http://www.aetherdesign.net
 /* #Navigation
 ================================================== */
 
-	header { padding-top: 50px; border-bottom: 1px solid #d6d6d6; }
+	header { padding: 50px 0px 0px 0px;  }
 	
 	#logo img { float: left; }
 	
-	#navigation { float: right; margin:17px 0px 0px 0px; }
+	#navigation { float: right; margin:5px 0px 0px 0px; }
 	
 	#navigation li {
 		display: block;
 		float: left;
 		margin-right: 30px;
-		line-height: 17px; /* match the height of the logo */
+		line-height: 47px; /* match the height of the logo */
 		text-transform: uppercase;
 		font-size: 12px;
 	}
@@ -57,27 +57,29 @@ Author URI: http://www.aetherdesign.net
 	#navigation .dropdown {
 		display: none;
 		margin: 0;
-		padding: 0;
+		padding: 0px 0px;
 		position: absolute;
-		margin-top: 25px;
+		margin-top:-5px;
 		z-index: 300;
 		background: #f6615a;
-		margin-left: -25px;
+		margin-left: -58px;
 		line-height: 100%;
 	}
 	
-	#navigation .dropdown li { float: none; margin: 0; padding: 0; }
+	#navigation .dropdown li { float: none; margin:20px 0px; padding: 0; }
 	#navigation li.drop { padding-bottom: 25px; }
 	#navigation li.drop:hover { cursor: pointer; }
 	
 	#navigation .dropdown li a {
 		display: block; 
 		color: white;
-		font-size: 12px;
+		font-size: 14px;
 		background: transparent;
-		margin: 0;
-		padding: 15px 65px 15px 30px; 
-		font-family:"futura"; 
+		margin: -10px 0px;
+		padding:0px 15px 0px 15px;
+		text-align:center;
+		text-transform:capitalize;
+		line-height:14px; 
 	}
 	
 	#navigation .dropdown li a:hover {
@@ -144,10 +146,18 @@ Author URI: http://www.aetherdesign.net
 	#overview .block {
 		display: block;
 		background: #fff;
-		border-bottom: 7px solid #cce4fd;
+		border-bottom: 7px solid #ffb5a9;
 		padding: 20px 20px 40px 20px;
 	}
+	
+	#overview .height {
+		height:475px;
+	}
 
+	#overview .height2 {
+		height:775px;
+	}
+	
 	#overview .title, #overview .icon, #overview .description { float: left; }
 
 	#overview .title {
@@ -156,9 +166,10 @@ Author URI: http://www.aetherdesign.net
 	}
 
 	#overview .description {
+		width:100%;
 		border-top: 1px solid #e4f1fe;
 		padding-top: 20px;
-		margin-top: 20px;
+		margin-top: 15px;
 	}
 
 
@@ -223,13 +234,13 @@ Author URI: http://www.aetherdesign.net
 /* #Footer
 ================================================== */
 
-	footer { width: 100%; background: #37464f; padding: 50px 0px; }
+	footer { width: 100%; background: #ababab; margin-top:100px;padding: 50px 0px; }
 
 	#footer-nav li { float: left; padding-right: 25px; line-height: 32px; }
 	#footer-nav li:last-of-type { padding-right: 0px; }
-	#footer-nav li a { color: #929ea5; text-transform: uppercase; font-size: 10px; }
-	#footer-nav li a:hover { color: #fff; }
-	#footer-nav li.active a { color: #fff!important; }
+	#footer-nav li a { color: #fff; text-transform: uppercase; font-size: 10px; }
+	#footer-nav li a:hover { color: #f6615a; }
+	#footer-nav li.active a { color: #f6615a!important; }
 
 	#social-icons li { float: right; padding-left: 10px; }
 	#social-icons li:last-of-type { padding-left: 0px; }
@@ -239,13 +250,13 @@ Author URI: http://www.aetherdesign.net
 /* #Copyright
 ================================================== */			
 	
-	#copyright { width: 100%; background: #212a30 url(../images/icons/copyright.png) no-repeat top center; padding: 25px 0px;}
+	#copyright { width: 100%; background: #434343 url(../images/icons/copyright.png) no-repeat top center; padding: 25px 0px;}
 
 	#copyright p { text-align: right; color: #929ea5; font-size: 10px; }
 	#copyright a { color: #fff; }
 	#copyright a:hover { color: #929ea5; }
 
-	#author { text-align: left!important; }
+	#author { text-align: left!important;text-transform:uppercase; }
 
 
 

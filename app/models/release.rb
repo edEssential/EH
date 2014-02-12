@@ -1,5 +1,5 @@
 class Release < ActiveRecord::Base
-  attr_accessible :title, :review, :description, :releaseinfo, :buylink, :url, :packshot, :rightimage
+  attr_accessible :title, :review, :description, :releaseinfo, :buylink, :url, :packshot, :rightimage, :review_source
   
   has_attached_file :rightimage, styles: {
     thumb: '464x178>'

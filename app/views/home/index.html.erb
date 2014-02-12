@@ -1,10 +1,10 @@
-<div id="intro" class="container twelve columns">
+<div id="intro" class="container twelve columns ten">
 
 	<!-- Heading -->
 	<div id="title" class="introText six columns">
-		<strong>Hello.</strong> My name is Ed Hamilton. I release <span class="linkOrange"><%= link_to 'music', root_path %></span> on 
-		<span class="labelsLink"><%= link_to 'Hibernate', root_path %></span> &amp; <span class="labelsLink"><%= link_to 'Futuresequence', root_path %>.
-		<br />I also take <span class="linkOrange"><%= link_to 'photographs' %></span> &amp; <span class="linkOrange"><%= link_to 'build websites', root_path %></span>
+		<strong>Hello.</strong> My name is Ed Hamilton. I release <span class="linkOrange"><%= link_to 'music', 'http://edhamilton.bandcamp.com/', :target => "_blank" %></span> on 
+		<span class="labelsLink"><%= link_to 'Hibernate', 'http://hibernate-recs.co.uk/', :target => '_blank' %></span> &amp; <span class="labelsLink"><%= link_to 'Futuresequence', 'http://futuresequence.com/', :target => "_blank" %>.
+		<br />I also take <span class="linkOrange"><%= link_to 'photographs', 'http://www.flickr.com/photos/edhamilton', :target => '_blank' %></span> &amp; <span class="linkOrange"><%= link_to 'build websites', 'http://eghamilton.org', :target => '_blank' %></span>
 		<%= link_to image_tag('readmore.png'), root_path %>
 		<div style="padding-top:15px;">
 			<% if user_signed_in? %>
@@ -12,77 +12,50 @@
 			<% end %>
 		</div>
 	</div>
+	<div class="homePhoto five columns offset-by-one">
+		<%= image_tag(@homepost.rightimage(:thumb)) rescue nil %>
+	</div>
 
 </div><!-- END CONTAINER -->
 
-<div class="light-background">
-
-	<!-- Call to Action -->
-	<div id="call-to-action" class="container">
-		<h1 class="twelve columns">Introducing Mint</h1>
-		<p class="sub-heading five columns">Mint is multi-purpose. The basics are covered - corporate site, designer portfolio and app showcase.</p>
-		<a class="button" href="#" target="_blank">Buy it now <span class="button-arrow">→</span></a>
-	</div><!-- END CONTAINER -->
-
-</div>
-
-<div class="dark-background">
+<div class="mainContent">
 
 	<!-- Overview -->
 	<ul id="overview" class="container">
-		<li class="four columns">
+		<li class="five columns">
 			<div class="block clearfix">
-				<span class="icon"><%= image_tag('overview1.png') %></span>
-				<h3 class="title">Easy setup</h3>
-				<p class="description">Mint is easy to set up. In a few quick modifications you can customize it to fit your needs. The documentation will guide you through the process.</p>
+				<span class="icon"><%= image_tag('musicIcon.png') %></span>
+				<h3 class="title">Music</h3>
+				<p class="description"></p>
+				<div id="tabs">
+					<ul>
+						<li><a href="#tab-1"><%= @homepost.title1 rescue nil %></span></a></li>
+						<li><a href="#tab-2"><%= @homepost.title2 rescue nil %></span></a></li>
+						<li><a href="#tab-3"><%= @homepost.title3 rescue nil %></span></a></li>
+					</ul>
+					<div id="tab-1"><%= @homepost.url1.html_safe rescue nil %></div>
+					<div id="tab-2"><%= @homepost.url2.html_safe rescue nil %></div>
+					<div id="tab-3"><%= @homepost.url3.html_safe rescue nil %></div>
+				</div>
 			</div>	
 		</li>
 		<li class="four columns">
-			<div class="block clearfix">
-				<span class="icon"><%= image_tag('overview2.png') %></span>
-				<h3 class="title">Super support</h3>
-				<p class="description">We offer our products with confidence, because we know that there will be no dissapointment at the stage where the customer needs our help.</p>
+			<div class="block clearfix height">
+				<span class="icon"><%= image_tag('cameraIcon.png') %></span>
+				<h3 class="title">Latest Photographs</h3>
+				<p class="description upTen"><%= @homepost.latestimage_updated_at.to_s(:due_date) %></p>
+				<span class="homePhotoSmall"><%= link_to image_tag(@homepost.latestimage(:thumb)), photographs_path rescue nil %></span>
 			</div>	
 		</li>
-		<li class="four columns">
-			<div class="block clearfix">
-				<span class="icon"><%= image_tag('overview3.png') %></span>
-				<h3 class="title">Clean code</h3>
-				<p class="description">Fully validated code. We make sure to help you not only with the guide for the setup but  with the code as well - fully commented and structured.</p>
+		<li class="three columns">
+			<div class="block clearfix height">
+				<span class="icon"><%= image_tag('tweetsIcon.png') %></span>
+				<h3 class="title">Tweets</h3>
+				<p class="description"></p><br />
+				<a class="twitter-timeline" height="334" data-chrome="noheader noborders nofooter" href="https://twitter.com/edhamilton812" data-widget-id="433557009514786816">Loading Tweets...</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			</div>	
 		</li>
 	</ul><!-- END CONATINER -->
 
 </div>
-
-<div id="intro" class="container">
-		
-		
-		<div class="rightPhoto">
-			<%= image_tag(@homepost.rightimage(:thumb)) rescue nil %>
-		</div>
-</div>
-<div class="homepageContent">
-	<div class="latestPhoto">
-		Latest Photos
-		<div class="date"><%= @homepost.latestimage_updated_at.to_s(:due_date) %></div>
-		<%= link_to image_tag(@homepost.latestimage(:thumb)), photographs_path rescue nil %>
-	</div>
-
-	<div class="soundcloud" id="tabs">
-		<ul class="titles">
-	  		<li class="setTitle linkGray"><a href="#tabs-1"><%= @homepost.title1 rescue nil %></a></li>
-	   		<li class="setTitle linkGray"><a href="#tabs-2"><%= @homepost.title2 rescue nil %></a></li>
-	   		<li class="setTitle linkGray"><a href="#tabs-3"><%= @homepost.title3 rescue nil %></a></li>
-	 	</ul>
-	 	<div id="tabs-1">
-	   		<p><%= @homepost.url1.html_safe rescue nil %></p>
-	 	</div>
-	 	<div id="tabs-2">
-	   		<p><%= @homepost.url2.html_safe rescue nil %></p>
-	 	</div>
-	 	<div id="tabs-3">
-	   		<p><%= @homepost.url3.html_safe rescue nil %></p>
-	 	</div>
-	</div>
-</div

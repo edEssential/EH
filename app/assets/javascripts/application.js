@@ -6,18 +6,10 @@
 //= require custom
 
 $(document).ready(function () {
-	$('.header').hide();
-	$('.header').delay(200).fadeIn(400);
-	$('.rulers').hide();
-	$('.rulers').delay(200).fadeIn(400);
-	$('.releaseHeader').hide();	
-	$('.releaseHeader').delay(600).fadeIn(400);
-	$('.releaseContent').hide();	
-	$('.releaseContent').delay(600).fadeIn(400);
-	$('.homepageHeader').hide();	
-	$('.homepageHeader').delay(600).fadeIn(400);
-	$('.homepageContent').hide();	
-	$('.homepageContent').delay(1600).fadeIn(800);
+	$('.page').hide();	
+	$('.page').delay(800).fadeIn(600);
+	$('#myHead').hide();	
+	$('#myHead').delay(400).fadeIn(400);
 	$('#show_date').datepicker( {
 		dateFormat : "dd MM yy"
 	});

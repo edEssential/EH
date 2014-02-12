@@ -24,15 +24,15 @@
 	<!-- Navigation -->
 	<nav id="nav" class="nine columns">
 		<ul id="navigation">
-			<li class="drop">Releases
+			<li class="drop">Music
 				<ul class="dropdown clearfix">
-					<li><%= link_to 'Arabesque', release_path(3) %></li>
+					<!--<li><%#= link_to 'Arabesque', release_path(3) %></li>-->
 					<li><%= link_to 'Sketches For Skomer', release_path(1) %></li>
 					<li><%= link_to 'Behind The Clouds', release_path(2) %></li>
 				</ul>
 			</li>
-			<li><%= link_to 'Photography', photographs_path, :class => 'photosnav'%></li>
-			<li><%= link_to 'Web Design', designs_path, :class => 'designsnav' %></li>
+			<li><%= link_to 'Photography', 'http://www.flickr.com/photos/edhamilton', :class => 'photosnav', :target => '_blank' %></li>
+			<li><%= link_to 'Web Design', 'http://eghamilton.org', :class => 'designsnav', :target => '_blank' %></li>
 			<li><%= link_to 'Contact', ('') %></li>
 		</ul>
 	</nav><!-- END NAVIGATION -->

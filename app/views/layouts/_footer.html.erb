@@ -4,18 +4,17 @@
 
 		<!-- Footer Navigation -->
 		<ul id="footer-nav" class="six columns">
-			<li class="active"><a href="index.html">Home</a></li>
-			<li><a href="portfolio-standard.html">Portfolio</a></li>
-			<li><a href="about.html">Pages</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="contact.html">Contact</a></li>
+			<li><%= link_to 'About', root_path %></li>
+			<li><%= link_to 'Credits', root_path %></li>
+			<li><%= link_to 'Contact', root_path %></li>
 		</ul>
 
 		<!-- Social Icons -->
 		<ul id="social-icons" class="six columns">
 			<li><%= link_to image_tag('facebook.png'), 'https://www.facebook.com/ed.hamilton.10', :target => '_blank' %></li>
-			<li><%= link_to image_tag('twitterAlt.png'), 'https://www.facebook.com/ed.hamilton.10', :target => '_blank' %></li>
-			<li><%= link_to image_tag('dribbble.png'), 'https://www.facebook.com/ed.hamilton.10', :target => '_blank' %></li>
+			<li><%= link_to image_tag('twitterAlt.png'), 'https://twitter.com/edhamilton812', :target => '_blank' %></li>
+			<li><%= link_to image_tag('soundcloudAlt.png'), 'https://soundcloud.com/ed-hamilton', :target => '_blank' %></li>
+			<li><%= link_to image_tag('bandcamp.png'), 'http://edhamilton.bandcamp.com/', :target => '_blank' %></li>
 		</ul> 
 
 	</div><!-- END CONTAINER -->
@@ -25,8 +24,8 @@
 <div id="copyright">
 	<div class="container">
 
-		<p id="author" class="six columns">Theme by <a href="http://themeforest.net/user/aether_" target="_blank">aether_</a></p>
-		<p class="six columns">Copyright 2013 <a href="#" target="_blank">Mint</a></p>
+		<p id="author" class="six columns"><a href="#" target="_blank">Built by Ed Hamilton</a></p>
+		<p class="six columns">Copyright <%= Time.now.year %></p>
 
 	</div><!-- END CONTAINER -->
 </div>

@@ -11,6 +11,8 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem "auto_html"
 gem 'jquery-rails'
+gem 'oauth'
+gem 'grackle'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -29,11 +29,14 @@
 	
 	<body>
 		
-		<div><%= render 'layouts/header' %></div>
 		
-		<%= yield %>
 		
+		<div id="myHead"><%= render 'layouts/header' %></div>
+		<div class="page">
+		<div><%= yield %></div><br />
+		<div id="rulers"><%= render 'layouts/rulers' %></div>
 		<div><%= render 'layouts/footer' %></div>
+		</div>
 
 	</body>
 </html>

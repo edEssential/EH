@@ -1,27 +1,33 @@
-<div class="releaseHeader">
-	<div class='<%= release_review %>'>
-		<%= @release.review %>
+<div id="intro" class="container twelve columns ten">
+
+	<div id="title" class="releaseReview six columns">
+		<%= image_tag('open-quote.png') %><%= @release.review %> - <span class="smallItalic"><%= @release.review_source %></span>
 	</div>
-	<div class="rightPhoto">
+	<div class="homePhoto five columns offset-by-one">
 		<%= image_tag(@release.rightimage(:thumb)) rescue nil %>
 	</div>
+
 </div>
-<div class="releaseContent">
-	<div class="latestPhoto">
-		<%= @release.title %>
-		<div class="date"><%= @release.releaseinfo %></div>
-		<%= image_tag(@release.packshot(:thumb)) %>
-	</div>
-	<div class="soundcloud textGray description">
-		<%= simple_format(@release.description) %>
-	</div>
-	<div class="releaseDate">
-		<%= @release.releaseinfo %>
-	</div>
-	<div class="track">
-		<%= @release.url_html %>
-	</div>
+
+<div class="mainContent">
+
+	<ul id="overview" class="container">
+		<li class="three columns">
+			<div class="block clearfix">
+				<h3 class="title"><%= @release.title %></h3>
+				<p class="description"></p>
+				<%= image_tag(@release.packshot.url(:thumb), :class => "packshot" ) %></p>
+			</div>	
+		</li>
+		<li class="five columns">
+			<div class="block clearfix">
+				<p class="releaseDescription"><%= @release.description %></p>
+			</div>	
+		</li>
+	</ul>
+	
+	<% if user_signed_in? %>
+		<%= link_to image_tag('edit2.png'), edit_release_path, :class => "edit" %>
+	<% end %>
+	
 </div>
-<% if user_signed_in? %>
-	<%= link_to image_tag('edit2.png'), edit_release_path, :class => "edit" %>
-<% end %>
