@@ -17,7 +17,7 @@
 		<div class="userInfo">
 			{ Logged in as <strong><%= current_user.email %></strong>
 			<span class="linkPink"><%= link_to 'Edit', edit_user_registration_path %></span>
-			<span class="linkPink"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></span> }
+			<span class="linkPink"><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></span> }
 		</div>
 	<% end %>
 	

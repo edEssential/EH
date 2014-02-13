@@ -1,9 +1,10 @@
 //= require jquery
-//= require_tree .
+//= require jquery_ujs
 //= require jquery-1.7.2.min
 //= require plugins
 //= require options
 //= require custom
+//= require_tree .
 
 $(document).ready(function () {
 	$('.page').hide();	
