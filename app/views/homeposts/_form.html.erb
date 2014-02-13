@@ -1,24 +1,42 @@
-<div class="formText formFade">
-	<p class="formHeader Gray">Add or edit your homepage content below!</p><br /><br />
-	<div class="form">	
-		<%= form_for(@homepost) do |f| %>
-			<%= f.label :Upload_right_image, class: 'formFieldT2' %>
-    		<%= f.file_field :rightimage, class: 'formFieldT3'  %><br /><br />
-			<%= f.label :Upload_latest_image, class: 'formFieldT2' %>
-    		<%= f.file_field :latestimage, class: 'formFieldT3'  %><br /><br />
-			<%= f.label :Tab_1_title, class: 'formFieldT2' %>
-    		<%= f.text_field :title1, class: 'formFieldT2'  %><br /><br />
-			<%= f.label :Tab_1_content, class: 'formFieldT2' %>
-    		<%= f.text_field :url1, class: 'formFieldt2T2'  %><br /><br />
-			<%= f.label :Tab_2_title, class: 'formFieldT2' %>
-    		<%= f.text_field :title2, class: 'formFieldT2'  %><br /><br />
-			<%= f.label :Tab_2_content, class: 'formFieldT2' %>
-    		<%= f.text_field :url2, class: 'formFieldT2'  %><br /><br />
-			<%= f.label :Tab_3_title, class: 'formFieldT2' %>
-    		<%= f.text_field :title3, class: 'formFieldT2'  %><br /><br />
-			<%= f.label :Tab_3_content, class: 'formFieldT2' %>
-    		<%= f.text_field :url3, class: 'formFieldT2'  %><br /><br />
-    		<%= f.submit %>
-		<% end %>
-	</div>
+<div class="mainContent">
+	<%= form_for(@homepost) do |f| %>
+		<ul id="overview" class="container twelve columns">
+			<div class="block two columns marginator">
+				<h3 class="title">Edit homepage content</h3>
+			</div>
+
+			<div class="block clearfix five columns height3 left-margin">
+			
+				<div id="tabs">
+					<ul>
+						<li><a href="#tab-11"><%= f.label :Title_1 %></span></a></li>
+						<li><a href="#tab-12"><%= f.label :Content_1 %></span></a></li>
+						<li><a href="#tab-13"><%= f.label :Title_2 %></span></a></li>
+						<li><a href="#tab-14"><%= f.label :Content_2 %></span></a></li>
+					</ul>
+					<div id="tab-11" class="form-field"><%= f.text_field :title1, class: 'email text-area' %></div>
+					<div id="tab-12" class="form-field"><%= f.text_field :url1, class: 'name text-area' %></div>
+					<div id="tab-13" class="form-field"><%= f.text_field :title2, class: 'email text-area' %></div>
+					<div id="tab-14" class="form-field"><%= f.text_field :url2, class: 'email text-area' %></div>
+				</div>
+			</div>
+			<div class="block clearfix four columns left-margin">
+				<div id="tabs" class="200top">
+					<ul>
+						<li><a href="#tab-15"><%= f.label :Title_3 %></span></a></li>
+						<li><a href="#tab-16"><%= f.label :Content_3 %></span></a></li>
+						<li><a href="#tab-17"><%= f.label :Right %></span></a></li>
+						<li><a href="#tab-18"><%= f.label :Latest %></span></a></li>
+					</ul>
+					<div id="tab-15" class="form-field"><%= f.text_field :title3, class: 'email text-area' %></div>
+					<div id="tab-16" class="form-field"><%= f.text_field :url3, class: 'email text-area' %></div>
+					<div id="tab-17" class="form-field"><%= f.file_field :rightimage, class: 'name' %></div>
+					<div id="tab-18" class="form-field"><%= f.file_field :latestimage, class: 'name' %></div>
+				</div>
+			</div>
+			<div class="block two columns left-margin top-margin">
+				<div class="form-click"><%= f.submit "Submit", :id => "submit" %></div>
+			</div>
+		</ul>
+	<% end %>
 </div>
