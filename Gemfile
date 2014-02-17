@@ -13,6 +13,7 @@ gem "auto_html"
 gem 'jquery-rails'
 gem 'oauth'
 gem 'grackle'
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
