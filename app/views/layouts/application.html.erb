@@ -10,14 +10,12 @@
 	    <meta name="keywords" content="">
 	    <meta name="robots" content="">
 	    <link rel="shortcut icon" href="assets/icon.ico">
-	    <div class="fit-vids-style">­<style>.fluid-width-video-wrapper {width: 100%;position: relative;padding: 0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}</style>
+	
+	    <div class="fit-vids-style">
+			<style>.fluid-width-video-wrapper {width: 100%;position: relative;padding: 0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}</style>
 		</div>
+		<%= stylesheet_link_tag "application" %>
 		<script src="assets/modernizr.js"></script>
-		<link rel="stylesheet" href="assets/bootstrap.css">
-	    <link rel="stylesheet" href="assets/bootstrap-theme.css">
-	    <link rel="stylesheet" href="assets/foundation.css">
-	    <link rel="stylesheet" href="assets/main.css">
-		<script type="text/javascript" src="assets/423299160645709824"></script>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,700|Open+Sans:300,700' rel='stylesheet' type='text/css'>
 	</head>
   
@@ -247,74 +245,7 @@
 	    	</div>
 		</div>
 	</div>
-	</footer>	<script src="assets/jquery.js"></script>
-		<script src="assets/foundation.min.js"></script>
-		<script src="assets/index.js"></script>
-		<script src="assets/jquery.fitvids.js"></script>
-		<script type="text/javascript" src="assets/bootstrap.js"></script>
-	    <script>
-	      $(window).load(function() {               $('#status').fadeOut('slow');               $('#preloader').delay(350).fadeOut('slow');
-	      });	
-	      $(document).foundation();
-	      $(document).ready(function () {
-	          // Handler for .ready() called.
-	          $('#arrow-container').click(function () {
-	              $('html, body').animate({
-	                  scrollTop: $('.index-wrapper').offset().top
-	              }, 800);
-	          });
-	      });
-	      $(document).ready(function() {
-	      	$(".topLink").click(function() {
-	      		$("html, body").animate({
-	      			scrollTop: 0	
-	      		}, {
-	      			duration: 800,
-	      			easing: "swing"
-	      		});
-	      		return false;
-	      	});
-     
-	      });
-	      $(document).ready(function() {
-     
-	      	$("a").each(function () {
-	      	    if (this.hostname != document.location.hostname) this.target = "_blank";
-	      	});
-     	
-	      });
-	      $(document).ready(function() {
-     
-	          var anchor = document.querySelectorAll('#button-wrapper button');
-         
-	          [].forEach.call(anchor, function(anchor){
-	            var open = false;
-	            anchor.onclick = function(event){
-	              event.preventDefault();
-	              if(!open){
-	                $('#splash button').addClass('button-fixed');
-	                this.classList.add('close');
-	                open = true;
-	                $('.menu').addClass('openmenu');
-	                $('html, body').addClass('fix-body');
-	                $('body').bind('touchmove', function(e){e.preventDefault()})
-	              }
-	              else{
-	                $('#splash button').removeClass('button-fixed');
-	                this.classList.remove('close');
-	                open = false;
-	                $('.menu').removeClass('openmenu');
-	                $('html, body').removeClass('fix-body');
-	                $('body').unbind('touchmove')
-	              }
-	            }
-	          }); 
-	        });
-	        $(document).ready(function(){
-	          // Target your .container, .wrapper, .post, etc.
-	          $("#adismalaffair").fitVids();
-	        });
-	    </script>
-
+	</footer>	
+	<%= javascript_include_tag "application" %>
 	</body>
 </html>
