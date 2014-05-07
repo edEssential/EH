@@ -62,33 +62,6 @@ $(window).load(function() {               $('#status').fadeOut('slow');         
   	});
 
   });
-  $(document).ready(function() {
-
-      var anchor = document.querySelectorAll('#button-wrapper button');
- 
-      [].forEach.call(anchor, function(anchor){
-        var open = false;
-        anchor.onclick = function(event){
-          event.preventDefault();
-          if(!open){
-            $('#splash button').addClass('button-fixed');
-            this.classList.add('close');
-            open = true;
-            $('.menu').addClass('openmenu');
-            $('html, body').addClass('fix-body');
-            $('body').bind('touchmove', function(e){e.preventDefault()})
-          }
-          else{
-            $('#splash button').removeClass('button-fixed');
-            this.classList.remove('close');
-            open = false;
-            $('.menu').removeClass('openmenu');
-            $('html, body').removeClass('fix-body');
-            $('body').unbind('touchmove')
-          }
-        }
-      }); 
-    });
     $(document).ready(function(){
       // Target your .container, .wrapper, .post, etc.
       $("#adismalaffair").fitVids();
