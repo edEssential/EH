@@ -21,19 +21,299 @@
   
 	<body class="">
 
- 	 	<div id="preloader">
-	      	<div id="status">
+ 		<div id="preloader">
+	    	<div id="status">
 	      		<div class="fadeInDown">
 	      			<img src="assets/logo_black.png" alt="">
 	      		</div>
 	      	</div>
 	  	</div>
 	
-		<%= render 'layouts/header' %>
- 		<%= yield %>
-		<%= render 'layouts/footer' %>
+		<div class="menu">
+			<div class="main-menu">
+				<ul>
+					<li><a data-toggle="modal" data-target="#arabesque">Arabesque</a></li>
+					<li><a data-toggle="modal" data-target="#sfs">Sketches for Skomer</a></li>
+					<li><a data-toggle="modal" data-target="#btc">Behind the Clouds (for Zoë)</a></li>
+					<li><a href="mailto:ed_hamilton@live.com">Contact</a>
+				</ul>
+			</div>
+		</div>
+
+		<div class="show-for-small">
+			<nav class="top-nav">
+				<div class="row">
+					<div class="small-2 columns">
+						<div id="logo-small" class="white">
+							<a href="#">ED HAMILTON</a>
+						</div>  
+					</div>
+					<div class="large-6 medium-8 small-10 columns">
+						<div id="button-wrapper">
+							<button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x" data-reveal-id="mobile-menu">
+								<span class="lines-white"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</nav> 
+		</div>
+
+		<div class="hide-for-small">
+			<header>
+				<div class="row">
+			  		<div class="small-2 columns">
+			  			<div id="logo">
+			  				<a href="#">Ed Hamilton</a>
+			  			</div>  
+			  		</div>
+			  		<nav class="large-7 large-offset-3 medium-8 medium-offset-2 small-10 columns">
+				  		<div class="hide-for-small">
+				  		  <ul id="header-nav">
+				  		  <li><a data-toggle="modal" data-target="#arabesque">Arabesque</a></li>
+				  		  <li><a data-toggle="modal" data-target="#sfs">Sketches For Skomer</a></li>
+				  		  <li><a data-toggle="modal" data-target="#btc">Behind The Clouds (for Zoë)</a></li>
+							<li><a href="mailto:ed_hamilton@live.com">Contact</a>
+				  		  </ul>
+				  		  </div>
+			  		</nav>
+			  	</div>
+			</header>
+		</div>
 		
-		<%= javascript_include_tag "application" %>
+ 		<section id="splash">
+			<div id="splashcontent">
+
+				<div class="row">
+				  <div class="large-10 medium-12 small-centered columns">
+				    <h1>Hi, I'm Ed. I'm a musician from London making small sounds for the quiet hours. You can hear some of my work below...</h1>
+				    <div id="arrow-container">
+				    	<svg version="1.1" id="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+				    	<g>
+				    		<path d="M45.7,69.4c-1.2-1.2-1.2-3.1,0-4.2l36.7-36.8c1.2-1.2,3.1-1.2,4.2,0l2.1,2.1c1.2,1.2,1.2,3.1,0,4.2L52.1,71.6
+				    			c-1.2,1.2-3.1,1.2-4.2,0L45.7,69.4z"></path>
+				    	</g>
+				    	<g>
+				    		<path d="M13.3,28.4c1.2-1.2,3.1-1.2,4.2,0l36.8,36.7c1.2,1.2,1.2,3.1,0,4.2l-2.1,2.1c-1.2,1.2-3.1,1.2-4.2,0L11.1,34.8
+				    			c-1.2-1.2-1.2-3.1,0-4.2L13.3,28.4z"></path>
+				    	</g>
+				    	</svg>
+
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</section>  
+
+		<div class="index-wrapper">
+			<div class="feature-thumbnails">
+			<div class="row">
+				<div class="large-4 medium-4 columns">
+					<a class="project-thumbnail" data-toggle="modal" data-target="#arabesque">
+						<img src="assets/arabesque.png" alt="">
+						<div class="project-hover-wrapper">
+							<div class="project-hover">
+								<h1>Arabesque</h1>
+								<p>Coming soon on Futuresequence</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="large-4 medium-4 columns">
+					<a class="project-thumbnail" data-toggle="modal" data-target="#sfs">
+						<img src="assets/sfs2.png" alt="">
+						<div class="project-hover-wrapper">
+							<div class="project-hover">
+								<h1>Sketches for Skomer</h1>
+								<p>Released 2013 by Futuresequence</p>
+							</div>
+						</div>
+					</a>
+				</div>
+		    	<div class="large-4 medium-4 columns">
+		    		<a class="project-thumbnail" data-toggle="modal" data-target="#btc">
+		    			<img src="assets/btc2.png" alt="">
+		    			<div class="project-hover-wrapper">
+		    				<div class="project-hover">
+		    					<h1>Behind the Clouds (for Zoe)</h1>
+		    					<p>Released 2011 on Hibernate</p>
+		    				</div>
+		    			</div>
+		    		</a>
+		    	</div>
+		    </div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="arabesque" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="myModalLabel">Arabesque</h4>
+			      </div>
+			      <div class="modal-body">
+					<div class="quote">
+						COMING AUTUMN 2014 ON FUTURESEQUENCE RECORDS<br/>preview below...
+					</div><h4 class="reviewSource"></h4><br/><br/>
+			        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/7884560%3Fsecret_token%3Ds-FMQjs&amp;auto_play=false&amp;hide_related=false&amp;show_playcount=false&amp;show_user=false&amp;show_artwork=false&amp;visual=true&amp;show_track=false"></iframe>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="sfs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="myModalLabel">Sketches for Skomer</h4>
+			      </div>
+			      <div class="modal-body">
+			        <div class="quote">
+						"Hamilton really does have something new to bring to the table, his rhythmic innovations 
+						breathing a fresh vitality into a familiar sound and helping to create an atmosphere that is immediately 
+						present rather than wistfully remembered. It’s also a remarkably assured and mature-sounding release, given that it’s 
+						his album debut."
+					</div><h4 class="reviewSource"> - Fluid Radio</h4><br/><br/>
+					<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/7880315&amp;auto_play=false&amp;hide_related=false&amp;show_playcount=false&amp;show_user=false&amp;show_artwork=false&amp;visual=true&amp;show_track=false"></iframe>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="btc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			        <h4 class="modal-title" id="myModalLabel">Behind the clouds (for Zoë)</h4>
+			      </div>
+			      <div class="modal-body">
+					<div class="quote">
+						"Extended duration gives his material room to breathe and develop at a pace that feels natural to it... resulting in a meditative setting that exudes a requiem like feel; a memento mori for Zoë, perhaps?"
+					</div><h4 class="reviewSource"> - Textura End Of Year Review 2011 </h4><br/><br/>
+			        <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/4005496&amp;auto_play=false&amp;hide_related=false&amp;show_playcount=false&amp;show_user=false&amp;show_artwork=false&amp;visual=true&amp;show_track=false"></iframe>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		</div>
+		
+		<footer>
+		<div class="hide-for-small">
+		<div class="row">
+			<div id="footer-content">
+		    	<div class="large-2 medium-2 columns">
+		    		<ul>
+		    		<li><a href="mailto:ed_hamilton@live.com" target="_blank">Email</a></li>
+		    		<li><a href="https://twitter.com/ed_hamilton812" target="_blank">Twitter</a></li>
+		    		<li><a href="http://instagram.com/ed_hamilton812" target="_blank">Instagram</a></li>
+					<li><a href="mailto:ed_hamilton@live.com">Contact</a>
+		    		</ul>
+		    	</div>
+		    	<div class="large-2 medium-2 columns">
+		    	</div>
+		    	<div class="large-6 medium-6 large-offset-1 medium-offset-1 columns"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-2 medium-2 small-6 columns">
+				<ul>
+				<li>© 2014 madebyeggs</li>
+				</ul>
+			</div>
+			<div class="hide-for-small">
+		    	<div class="large-6 medium-6 large-offset-3 medium-offset-3 columns">
+		    	</div>
+		    	<div class="large-1 medium-1 columns">
+					<div id="to-top-arrow">
+					<img src="assets/arrow.png" class="topLink">
+					</div>
+		    	</div>
+			</div>
+			<div class="show-for-small">
+		    	<div class="large-2 medium-2 small-6 columns">
+			    	<div id="back-to-top">
+				    	<ul class="topLink">
+				    		<li>Back to top ↑</li>
+				    	</ul>
+			    	</div>
+		    	</div>
+			</div>
+		</div>
+		</footer>
+		
+		<script src="./assets/jquery.js"></script>
+		<script src="./assets/foundation.min.js"></script>
+		<script src="./assets/index.js"></script>
+		<script src="./assets/jquery.fitvids.js"></script>
+		<script type="text/javascript" src="./assets/bootstrap.js"></script>
+		<script>
+	      $(window).load(function() {               
+			$('#status').fadeOut('slow');               
+			$('#preloader').delay(350).fadeOut('slow');
+	      });	
+	      $(document).foundation();
+	      $(document).ready(function () {
+	          // Handler for .ready() called.
+	          $('#arrow-container').click(function () {
+	              $('html, body').animate({
+	                  scrollTop: $('.index-wrapper').offset().top
+	              }, 800);
+	          });
+	      });
+	      $(document).ready(function() {
+	      	$(".topLink").click(function() {
+	      		$("html, body").animate({
+	      			scrollTop: 0	
+	      		}, {
+	      			duration: 800,
+	      			easing: "swing"
+	      		});
+	      		return false;
+	      	});
+
+	      });
+	      $(document).ready(function() {
+
+	      	$("a").each(function () {
+	      	    if (this.hostname != document.location.hostname) this.target = "_blank";
+	      	});
+
+	      });
+	      $(document).ready(function() {
+
+	          var anchor = document.querySelectorAll('#button-wrapper button');
+
+	          [].forEach.call(anchor, function(anchor){
+	            var open = false;
+	            anchor.onclick = function(event){
+	              event.preventDefault();
+	              if(!open){
+	                $('#splash button').addClass('button-fixed');
+	                this.classList.add('close');
+	                open = true;
+	                $('.menu').addClass('openmenu');
+	                $('html, body').addClass('fix-body');
+	                $('body').bind('touchmove', function(e){e.preventDefault()})
+	              }
+	              else{
+	                $('#splash button').removeClass('button-fixed');
+	                this.classList.remove('close');
+	                open = false;
+	                $('.menu').removeClass('openmenu');
+	                $('html, body').removeClass('fix-body');
+	                $('body').unbind('touchmove')
+	              }
+	            }
+	          }); 
+	        });
+	        $(document).ready(function(){
+	          // Target your .container, .wrapper, .post, etc.
+	          $("#adismalaffair").fitVids();
+	        });
+	    </script>
 		
 	</body>
 </html>
