@@ -1698,4 +1698,5 @@ background: url('/assets/img/discoveries.jpg') center center fixed;
 }
 
 a {text-decoration:none!important;}
-.quote {font-family:'Open Sans', sans-serif;font-size:1em;line-height:1.25em;}
+.quote {font-family:'Open Sans', sans-serif;font-size:1.3em;line-height:1.35em;margin-bottom:0.5em;font-weight:100;}
+.reviewSource {font-family:'Open Sans', sans-serif;font-weight:700;font-size:0.9em;}

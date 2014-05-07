@@ -4,6 +4,7 @@
 //= require index
 //= require jquery.fitvids
 //= require bootstrap
+//= require jquery-cycle
 
 $(document).ready(function () {
 	$('.page').hide();	
@@ -12,6 +13,11 @@ $(document).ready(function () {
 	$('#myHead').delay(400).fadeIn(400);
 	$('#show_date').datepicker( {
 		dateFormat : "dd MM yy"
+	});
+	$('.slides').cycle({
+		fx: 'fade',
+		timeout:  8000,
+		speed:  1500 
 	});
 });
 

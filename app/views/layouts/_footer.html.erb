@@ -1,31 +1,42 @@
-<!-- Footer -->
 <footer>
-	<div class="container">
-
-		<!-- Footer Navigation -->
-		<ul id="footer-nav" class="six columns">
-			<li><%= link_to 'About', root_path %></li>
-			<li><%= link_to 'Credits', root_path %></li>
-			<li><%= link_to 'Contact', root_path %></li>
-		</ul>
-
-		<!-- Social Icons -->
-		<ul id="social-icons" class="six columns">
-			<li><%= link_to image_tag('facebook.png'), 'https://www.facebook.com/ed.hamilton.10', :target => '_blank' %></li>
-			<li><%= link_to image_tag('twitterAlt.png'), 'https://twitter.com/edhamilton812', :target => '_blank' %></li>
-			<li><%= link_to image_tag('soundcloudAlt.png'), 'https://soundcloud.com/ed-hamilton', :target => '_blank' %></li>
-			<li><%= link_to image_tag('bandcamp.png'), 'http://edhamilton.bandcamp.com/', :target => '_blank' %></li>
-		</ul> 
-
-	</div><!-- END CONTAINER -->
-</footer>
-
-<!-- Copyright -->
-<div id="copyright">
-	<div class="container">
-
-		<p id="author" class="six columns"><a href="#" target="_blank">Built by Ed Hamilton</a></p>
-		<p class="six columns">Copyright <%= Time.now.year %></p>
-
-	</div><!-- END CONTAINER -->
+<div class="hide-for-small">
+<div class="row">
+	<div id="footer-content">
+    	<div class="large-2 medium-2 columns">
+    		<ul>
+    		<li><a href="mailto:ed_hamilton@live.com" target="_blank">Email</a></li>
+    		<li><a href="https://twitter.com/ed_hamilton812" target="_blank">Twitter</a></li>
+    		<li><a href="http://instagram.com/ed_hamilton812" target="_blank">Instagram</a></li>
+    		</ul>
+    	</div>
+    	<div class="large-2 medium-2 columns">
+    	</div>
+    	<div class="large-6 medium-6 large-offset-1 medium-offset-1 columns"></div>
+	</div>
 </div>
+<div class="row">
+	<div class="large-2 medium-2 small-6 columns">
+		<ul>
+		<li>© 2014 madebyeggs</li>
+		</ul>
+	</div>
+	<div class="hide-for-small">
+    	<div class="large-6 medium-6 large-offset-3 medium-offset-3 columns">
+    	</div>
+    	<div class="large-1 medium-1 columns">
+			<div id="to-top-arrow">
+			<img src="assets/arrow.png" class="topLink">
+			</div>
+    	</div>
+	</div>
+	<div class="show-for-small">
+    	<div class="large-2 medium-2 small-6 columns">
+	    	<div id="back-to-top">
+		    	<ul class="topLink">
+		    		<li>Back to top ↑</li>
+		    	</ul>
+	    	</div>
+    	</div>
+	</div>
+</div>
+</footer>
