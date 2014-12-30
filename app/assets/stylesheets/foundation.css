@@ -55,6 +55,9 @@ object,
 embed {
   height: 100%; }
 
+.preorder {float:right;clear:both;width:120px;margin:-50px -3px 6px 0px;}
+.preorder img {max-width:100%;}
+
 img {
   -ms-interpolation-mode: bicubic; }
 
